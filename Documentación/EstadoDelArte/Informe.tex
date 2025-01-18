@@ -1,0 +1,258 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}               % Use this package to include images
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}                % A library of many standard math expressions
+\usepackage[margin=1in]{geometry}   % Sets 1in margins.
+\usepackage{fancyhdr}               % Creates headers and footers
+\usepackage{enumerate}              % These two package give custom labels to a list
+\usepackage[shortlabels]{enumitem}
+\usepackage[spanish]{babel}
+\usepackage{xurl}
+
+
+\lstdefinestyle{bash}{
+  language=bash,
+  basicstyle=\ttfamily\footnotesize,   % Font style and size
+  keywordstyle=\color{blue}\bfseries,  % Keywords in blue and bold
+  commentstyle=\color{gray}\itshape,   % Comments in gray and italic
+  stringstyle=\color{red},             % Strings in red
+  backgroundcolor=\color{black!5},     % Light gray background
+  frame=single,                         % Draw a frame around the code
+  breaklines=true,                      % Enable line breaking
+  tabsize=2,                            % Set tab size
+  showstringspaces=false,               % Hide spaces in strings
+  morekeywords={sudo, echo, ls, cd, cp, mv, rm, mkdir, rmdir, chmod, chown, tar, grep, awk, sed, gcc, g++, javac, pypy3, kotlinc}, % Extra keywords
+}
+\lstset{style=bash}
+% Set up the headers and footers
+\pagestyle{fancy}
+
+% Clear previous settings to avoid conflicts
+\fancyhf{}
+
+% Define headers
+\fancyhead[l]{Ludwig Alvarado}               % Left header
+\fancyhead[c]{Semillo de Programación Competitiva}        % Center header
+\fancyhead[r]{2025-1S}                        % Right header
+
+% Horizontal line settings for header
+\renewcommand{\headrulewidth}{0.2pt}         % Line under header
+\setlength{\headheight}{15pt}                % Space for the header
+
+
+
+
+% Creates the header and footer. You can adjust the look and feel of these here.
+\pagestyle{fancy}
+\fancyhead[l]{Ludwig Alvarado}
+\fancyhead[c]{Semillero de Programación Competitiva}
+\fancyhead[r]{2025-1S}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt} %Creates a horizontal line underneath the header
+\setlength{\headheight}{15pt} %Sets enough space for the header
+
+
+
+\begin{document} %The writing for your homework should all come after this.
+
+El presente brinda información acerca de cómo están organizadas las competiciones de programación competitiva, qué recursos utilizan, cómo se organizan, concursos locales, nacionales, regionales e internacionales.
+
+
+\tableofcontents
+
+
+
+\section{Competiciones}
+
+\subsection{Colombia}
+
+Existe una liga de programación competitiva a nivel nacional llamada \textit{Colombian Collegiate Programming League} (CCPL), su sitio web es \url{https://www.programmingleague.org}, ellos listan y organizan eventos a nivel nacional. Todavía no se han publicado los eventos de este año, pero los del año pasado fueron 17 actividades en total; 11 competencias, el \textit{Training Camp Colombia 2024}, la primera edición de \textit{Programadores de América}, 3 \textit{World Finals}, la Maratón Nacional, y la Regional Latinoamericana.\cite{ccpl} Sus fechas fueron las siguientes:
+
+\begin{enumerate}
+\item Maratones de Programación CCPL:
+  \begin{itemize}
+  \item Febrero 24.
+  \item Marzo 9.
+  \item Abril 6.
+  \item Mayo 11.
+  \item Junio 1.
+  \item Julio 27.
+  \item Agosto 10.
+  \item Agosto 31.
+  \item Septiembre 12.
+  \item Octubre 5.
+  \item Noviembre 2.
+  \end{itemize}
+\item Programadores de América 2024 (Guadalajara, México):
+  \begin{itemize}
+  \item Marzo 12 al 18.
+  \end{itemize}
+\item ICPC World Finals 2022 y 2023 (Luxor, Egipto).
+  \begin{itemize}
+  \item Abril 14 al 19.
+  \end{itemize}
+\item Training Camp Colombia 2024 (Bogotá, Colombia).
+  \begin{itemize}
+  \item Julio 15 al 26.
+  \end{itemize}
+\item ICPC World Finals 2024 (Astaná, Kazalhstán).
+  \begin{itemize}
+  \item Septiembre 15 al 20.
+  \end{itemize}
+\item Maratón Nacional 2024 (Bogotá, Bucaramanga, Cali, Cartagena, Manizales, Medellín).
+  \begin{itemize}
+  \item Octubre 19.
+  \end{itemize}
+\item ICPC Latin American Regional 2024 (Bogotá).
+  \begin{itemize}
+  \item Noviembre 9.
+  \end{itemize}
+\end{enumerate}
+
+Parece ser que las maratones de programación las organiza la CCPL, tocaría estar pendiente de ellas en el sitio web para poder inscribir a la universidad, a su vez de meterse en el \textit{Training Camp}. Las otras competiciones son más regionales e internacionales, se puede aspirar a medida que el nivel de la universidad suba.
+
+\subsection{Bogotá}
+
+Además de las que organiza la CCPL, existen algunas competiciones a nivel local.
+
+\subsubsection{Universidad Nacional}
+
+La Universidad Nacional tiene un grupo de programacion competitiva llamado \textit{Programación Competitiva UNAL}, en su web (\url{https://sites.google.com/view/programacion-unal/}) comentan que son un grupo de estudiantes que querían mantener el puesto de la universidad como de las más fuertes a nivel colombiano en programación competitiva. Es creado por ex participantes de la universidad para ayudar a los estudiantes nuevos y así tener un ciclo constante de nuevos competidores y de tutores.
+
+Organizan competiciones internas para elegir los 4 equipos que van a representar a la universidad, la del año pasado fue el día 27 de julio y también contaron con la participación de 2 equipos externos de la Universidad Francisco de Paula Santander y de la Universidad de Cundinamarca\cite{UNAl}. Aquí es muy interesante que dejen participar otras universidades, se podría pedir para este año si podríamos mandar a un equipo a competir allí.
+
+\subsubsection{Universidad de los Andes}
+
+Los Andes también hace lo mismo que la Nacional, realizan una competición interna para mandar los 4 equipos a participar a la maratón regional. Sin embargo, en la bibliografía existente\cite{andes} no se encontró ninguna participación de alguna universidad externa. Se puede intentar contactar si en una próxima competición interna se puede enviar a algún equipo de la UJTL para que también compitan.
+
+Algo importante a recalcar es la bibliografía data del año 2019, no pude encontrar publicaciones más recientes, sin embargo, puede ser que se hagan a puerta cerrada.
+
+\subsubsection{Otras universidades}
+
+No se ha encontrado información para otras universidades aparte de las anteriores mencionadas. Por amigos del autor, se sabe que la Universidad EAN organiza competiciones internas para mejorar el nivel en la universidad, sin embargo, estos únicamente envían un equipo a la maratón nacional. Además, esta universidad presenta que solo se seleccionan a tres estudiantes que el profesor tenga como preferidos, dejando por fuera muchos otros estudiantes que quieren participar en la maratón nacional\cite{roa}.
+
+La Universidad Antonio Nariño posee talleres para que los estudiantes participen y fortalezcan sus habilidades en programación competitiva\cite{carlos}.
+
+
+\section{Entornos para competir y entrenar}
+
+Los entornos y las reglas varían entre competiciones. A continuación, se presentan algunas recopiladas. Se hace más énfasis en el apartado de software, qué plataformas y entornos se utilizan en las competiciones y los entrenamientos.
+
+
+
+\subsection{World Finals}
+
+Para las finales de la ICPC se utiliza el siguiente software\cite{icpc-finals}:
+
+\begin{enumerate}
+\item \textbf{Sistema Operativo:}
+  \begin{itemize}
+  \item Ubuntu 22.04.1 LTS Linux (64-bit). Los paquetes del SO pueden encontrarse \href{https://image.icpc.global/icpc2024/filesystem.manifest.amd64.txt}{\textbf{aquí}}.
+  \end{itemize}
+\item \textbf{Escritorio:}
+  \begin{itemize}
+  \item GNOME.
+  \end{itemize}
+\item \textbf{Editores:}
+  \begin{itemize}
+  \item vi/vim.
+  \item gvim.
+  \item emacs.
+  \item gedit.
+  \item geany.
+  \item kate.
+  \end{itemize}
+\item \textbf{Lenguajes:}
+  \begin{itemize}
+  \item Java (Openjdk 17.0.5 2022-10-18).
+  \item C (gcc 11.3.0).
+  \item C++
+  \item Python 3.
+  \item Kotlin.
+  \end{itemize}
+\item \textbf{IDEs:}
+  \begin{itemize}
+  \item \textbf{Eclipse} (versión 4.13, 2022-12):
+    \begin{itemize}
+    \item Java Development Tooling (JDT) versión 3.18.1400.v20221123-1800.
+    \item C++ Development Tooling (CDT) versión 11.0.0.
+    \item PyDev Python Development Tooling versión 10.0.2
+    \end{itemize}
+  \item \textbf{IntelliJ IDEA} (Community Edition, versión 2022.3):
+    \begin{itemize}
+    \item Java.
+    \item Kotlin.
+    \end{itemize}
+  \item \textbf{CLion} (versión 2022.3).
+  \item \textbf{Pycharm} (Community Edition, versión 2022.3).
+  \item \textbf{Code::Blocks} (versión 20.03-3.1).
+  \item \textbf{VS Code} (versión 1.74.2). Configurado con la extensión Microsoft C/C++ V1.15.4.
+  \end{itemize}
+\item \textbf{Compilación:}
+\begin{itemize}
+\item \textbf{C:}
+\begin{lstlisting}
+gcc -x c -g -O2 -std=gnu11 -static ${files}$ -lm
+\end{lstlisting}
+\item \textbf{C++:}
+\begin{lstlisting}
+g++ -x c++ -g -O2 -std=gnu++20 -static ${files}$
+\end{lstlisting}
+\item \textbf{Java:}
+\begin{lstlisting}
+javac -encoding UTF-8 -sourcepath . -d . ${files}$
+\end{lstlisting}
+\item \textbf{Python 3:}
+\begin{lstlisting}
+pypy3 -g py_compile ${files}$
+\end{lstlisting}
+\item \textbf{Kotlin:}
+\begin{lstlisting}
+kotlinc -d . ${files}$
+\end{lstlisting}
+\end{itemize}
+
+\end{enumerate}
+
+Se puede armar una máquina igual a las que hay en las finales siguiendo las instrucciones de \href{https://image.icpc.global/icpc2024/ImageBuildInstructions.html}{\textbf{aquí}}.
+
+
+
+\subsection{Universidad Nacional}
+
+Utilizan recursos como USACO y Codeforces para practicar conceptos y ejercicios. Y luego utilizan plataformas como \href{www.vjudge.net}{\texttt{vjudge.net}} para hacer \textit{mini} prácticas de ejercicios.
+
+Para decidir los equipos utilizan la parte de \textit{contest} en CodeForces, donde realizan \textit{normalmente} 14 ejercicios y realizan la competición dentro del mismo sitio, por ejemplo, consulte \url{https://codeforces.com/gym/102700}. Es de recalcar que estos ejercicios los hace la propia universidad, no se tiene información de si son los docentes, ex-alumnos, alumnos, o todos los mencionados anteriormente.
+
+Se podría investigar cómo crear competiciones propias a través de CodeForces con \textit{test cases} y todo lo que más se parezca al entorno real de una competición como la ICPC.
+
+\subsection{Universidad de los Andes}
+
+La Universidad de los Andes utiliza un GitHub donde suben ejercicios que van desarrollando y tienen más repositorios para competencias y temarios a desarrollar. El GitHub se puede visitar en: \url{https://github.com/mua-uniandes}. También, poseen un canal de YouTube donde explican algoritmos y estructuras de datos, todo desde un enfoque a programación competitiva. Se puede ingresar al canal mediante: \url{https://www.youtube.com/playlist?list=PLKs_MtJgZbTO75bJ0LqdwErbHSB26CMtv}.
+
+Al igual que la Nacional, utilizan \href{www.vjudge.net}{\texttt{vjudge.net}} para competiciones internas y para practicar.
+
+
+\section{Conclusiones}
+
+Después de esta pequeña investigación acerca de la escena local y una mirada por encima a la escena global, se sacan las siguientes conclusiones:
+
+
+\begin{itemize}
+\item El uso de herramientas como \href{www.vjudge.net}{\texttt{vjudge.net}} y \href{www.codeforces.com}{\texttt{codeforces.com}} es obligatorio para la preparación en estas competencias.
+\item Se pueden tener máquinas como las de las finales haciendo la guía que proporciona el ICPC.
+\item Incentivar las competiciones locales haciendo ejercicios que tengan que ver con la universidad para así ganar también apropiación de la misma (meter ejercicios con Cabito).
+\item Seleccionar los mejores equipos de la universidad para que en la competición del presente año, vayan 4 equipos a representación de la universidad.
+\item Mantener un registro de las actividades, lecciones, ejercicios y demás cosas que se hagan. Puede ser creando un micrositio en la página de la universidad, en un GitHub, canal de YouTube, entre otros.
+\end{itemize}
+
+
+
+\bibliographystyle{apalike}
+\bibliography{referencias}
+
+
+\end{document}
